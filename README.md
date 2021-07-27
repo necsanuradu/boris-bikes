@@ -6,12 +6,6 @@
 
  Objects  | Messages
 ------------- | -------------
-User  | 
-Bike  | 
+Person  | 
+Bike  | working?
 Docking station | release_bike
-
-
- Objects  | Messages
-------------- | -------------
-User  | 
-Bike  | good_bike?
