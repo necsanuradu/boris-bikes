@@ -19,6 +19,10 @@ describe DockingStation do
     bike = subject.docking_bike(Bike.new)
     expect(subject.docked_bikes.include? (bike)).to eq (true)
   end
+
+  it "should not release bike if none are available" do 
+    expect{ subject.release_bike }.to raise_error "No bikes available"
+  end 
 end
 
 
