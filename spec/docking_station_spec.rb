@@ -6,12 +6,19 @@ describe DockingStation do
   end
 
   it "it gets a bike" do 
+    bike = subject.docking_bike(Bike.new)
     expect(subject.release_bike.instance_of? Bike).to eq(true)
   end
 
   it "expects the bike to be working" do 
+    bike = subject.docking_bike(Bike.new)
     expect(subject.release_bike.working?).to eq(true)
   end 
+  
+  it "responds to docking_bike" do
+    bike = subject.docking_bike(Bike.new)
+    expect(subject.docked_bikes.include? (bike)).to eq (true)
+  end
 end
 
 

@@ -1,8 +1,25 @@
+#!/usr/bin/env ruby
 require "./lib/bike.rb"
+
 class DockingStation
-  def release_bike
-    return Bike.new
+  attr_reader :docked_bikes
+  def initialize
+    @docked_bikes = Array.new
   end
+
+  def release_bike
+    if(!@docked_bikes.empty?)
+      Bike.new
+    else 
+      raise "No bikes available"
+    end
+  end
+
+  def docking_bike(bike)
+    @bike = bike
+    @docked_bikes.push(@bike)
+    return @bike
+  end
+
 end
 
-# docking_station = DockingStation.new

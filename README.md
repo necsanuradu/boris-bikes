@@ -7,5 +7,5 @@
  Objects  | Messages
 ------------- | -------------
 Person  | 
-Bike  | working?
-Docking station | release_bike
+Bike  | working? | available
+Docking station | release_bike | docking_bike 
