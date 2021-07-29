@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 require "./lib/bike.rb"
-
+class Object
+  def in?(array)
+    array.include? (self)
+  end
+end
 class DockingStation
   attr_reader :docked_bikes
   def initialize
@@ -17,6 +21,7 @@ class DockingStation
 
   def docking_bike(bike)
     @bike = bike
+    raise "Dock is full" unless @docked_bikes.count < 1
     @docked_bikes.push(@bike)
     return @bike
   end
