@@ -7,11 +7,11 @@ class Bike
     puts "If the bike is not working or is not suitable for transportation?"
     puts "please press the N key"
     puts "else hit return"
-    if defined?($in_spec_test).nil?
+    #if defined?($in_spec_test).nil?
       get_user_bike_working?
-    else
-      get_user_bike_working?("")
-    end
+    #else
+      #get_user_bike_working?("")
+    #end
   end
 
   def get_user_bike_working?(working = STDIN.gets.chomp.downcase)

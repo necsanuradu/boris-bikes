@@ -20,7 +20,7 @@ class DockingStation
     @bikes_to_be_released.last
   end
 
-  def docking_bike(bikes)
+  def dock(bikes)
     bikes.respond_to?("each") ? @bikes = bikes : @bikes = [bikes]
     raise "Not enough spaces available" if too_many?(@bikes)
     filter_docking_bikes
