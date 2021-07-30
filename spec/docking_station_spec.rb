@@ -1,6 +1,7 @@
 require "./lib/docking_station.rb"
 # subject(:diary_printer) { described_class.new(diary, output) }
 describe DockingStation do
+  $in_spec_test = true
   subject(:dock_with_set_capacity){ described_class.new(30) }
   subject(:dock_with_default_capacity){ described_class.new }
   it "responds to release_bike" do 

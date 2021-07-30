@@ -28,7 +28,7 @@ class DockingStation
   end
 
   def filter_docking_bikes
-    @bikes.each { |bike| bike.working? ? (@working_bikes << bike) : (@broken_bikes << bike) }
+    @bikes.each { |bike| bike.dock_bike_working? ? (@working_bikes << bike) : (@broken_bikes << bike) }
   end
   private
   def not_enough?(how_many)
